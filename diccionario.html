@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="author" content="WB DataDic" />
-    <meta name="description" content="mydb Data Dictionary." />
-    <title>mydb Data Dictionary</title>
+    <meta name="description" content="bookfash Data Dictionary." />
+    <title>bookfash Data Dictionary</title>
     <style type="text/css">
     table{
         width: 100%;
@@ -51,9 +51,9 @@
 </head>
 <body>
 <div id="title-sect">
-<h1>mydb<br> Data Dictionay</h1>
+<h1>bookfash<br> Data Dictionay</h1>
 <p>
-<em>2023-07-27</em>
+<em>2023-08-11</em>
 </p>
 <p class="proj-desc">
 <em></em>
@@ -61,1558 +61,1035 @@
 </div>
 <h2>Alphabetic Index</h2>
 <ul>
+<li><a href='#apellidos_aleatorios'>apellidos_aleatorios</a></li>
+<li><a href='#nombres_aleatorios'>nombres_aleatorios</a></li>
+<li><a href='#tbb_autor'>tbb_autor</a></li>
+<li><a href='#tbb_criterio'>tbb_criterio</a></li>
+<li><a href='#tbb_editorial'>tbb_editorial</a></li>
+<li><a href='#tbb_genero'>tbb_genero</a></li>
+<li><a href='#tbb_libro'>tbb_libro</a></li>
+<li><a href='#tbb_persona'>tbb_persona</a></li>
+<li><a href='#tbb_recomendacion'>tbb_recomendacion</a></li>
+<li><a href='#tbb_valoracion'>tbb_valoracion</a></li>
 </ul>
-<div class="container-fluid">
-    <h1>bookfash</h1>
-    
-    <p class="d-print-none">
-    </p>
-  
-    <div>
-            <div>
-          <h2>tbb_autor</h2>
-          
-          <table class="table table-striped align-middle">
-            <thead>
-              <tr>
-                <th>Columna</th>
-                <th>Tipo</th>
-                <th>Nulo</th>
-                <th>Predeterminado</th>
-                                <th>Enlaces a</th>
-                              <th>Comentarios</th>
-                                <th>Tipo de medio</th>
-                            </tr>
-            </thead>
-            <tbody>
-                            <tr>
-                  <td class="text-nowrap">
-                    id_autor
-                                        <em>(Primaria)</em>
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    int(11)
-                  </td>
-                  <td>No</td>
-                  <td class="text-nowrap">
-                                        
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    PersonaId
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    int(11)
-                  </td>
-                  <td>No</td>
-                  <td class="text-nowrap">
-                                        
-                                    </td>
-                                    <td>tbb_persona -&gt; id_persona</td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    LibroId
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    int(11)
-                  </td>
-                  <td>No</td>
-                  <td class="text-nowrap">
-                                        
-                                    </td>
-                                    <td>tbb_libro -&gt; id_libro</td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    cantidadlibros
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    int(11)
-                  </td>
-                  <td>Sí</td>
-                  <td class="text-nowrap">
-                                        1
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    biografiaAutor
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    varchar(205)
-                  </td>
-                  <td>Sí</td>
-                  <td class="text-nowrap">
-                                        Biografia no disponible
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    estatus
-                                    </td>
-                  <td lang="en" dir="ltr">
-                    enum(&#039;Activo&#039;, &#039;Inactivo&#039;)
-                  </td>
-                  <td>No</td>
-                  <td class="text-nowrap">
-                                        Activo
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    fecha_actualizacion
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    timestamp
-                  </td>
-                  <td>Sí</td>
-                  <td class="text-nowrap">
-                                        <em>NULL</em>
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    fecha_registro
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    timestamp
-                  </td>
-                  <td>Sí</td>
-                  <td class="text-nowrap">
-                                        current_timestamp()
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                        </tbody>
-          </table>
-  
-                    <h3>Índices</h3>
-  
-            <table class="table table-striped align-middle">
-              <thead>
-                <tr>
-                  <th>Nombre de la clave</th>
-                  <th>Tipo</th>
-                  <th>Único</th>
-                  <th>Empaquetado</th>
-                  <th>Columna</th>
-                  <th>Cardinalidad</th>
-                  <th>Cotejamiento</th>
-                  <th>Nulo</th>
-                  <th>Comentario</th>
-                </tr>
-              </thead>
-  
-              <tbody>
-                                                <tr>
-                  <td rowspan="1">PRIMARY</td>
-                  <td rowspan="1">BTREE</td>
-                  <td rowspan="1">Sí</td>
-                  <td rowspan="1">No</td>
-  
-                                                      <td>
-                      id_autor
-                                        </td>
-                    <td>0</td>
-                    <td>A</td>
-                    <td>No</td>
-  
-                                        <td rowspan="1"></td>
-                                      </tr>
-                                                                <tr>
-                  <td rowspan="1">PersonaID_idx</td>
-                  <td rowspan="1">BTREE</td>
-                  <td rowspan="1">No</td>
-                  <td rowspan="1">No</td>
-  
-                                                      <td>
-                      PersonaId
-                                        </td>
-                    <td>0</td>
-                    <td>A</td>
-                    <td>No</td>
-  
-                                        <td rowspan="1"></td>
-                                      </tr>
-                                                                <tr>
-                  <td rowspan="1">LibroID_idx</td>
-                  <td rowspan="1">BTREE</td>
-                  <td rowspan="1">No</td>
-                  <td rowspan="1">No</td>
-  
-                                                      <td>
-                      LibroId
-                                        </td>
-                    <td>0</td>
-                    <td>A</td>
-                    <td>No</td>
-  
-                                        <td rowspan="1"></td>
-                                      </tr>
-                                            </tbody>
-            </table>
-                </div>
-            <div>
-          <h2>tbb_criterio</h2>
-          
-          <table class="table table-striped align-middle">
-            <thead>
-              <tr>
-                <th>Columna</th>
-                <th>Tipo</th>
-                <th>Nulo</th>
-                <th>Predeterminado</th>
-                                <th>Enlaces a</th>
-                              <th>Comentarios</th>
-                                <th>Tipo de medio</th>
-                            </tr>
-            </thead>
-            <tbody>
-                            <tr>
-                  <td class="text-nowrap">
-                    id_criterio
-                                        <em>(Primaria)</em>
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    int(11)
-                  </td>
-                  <td>No</td>
-                  <td class="text-nowrap">
-                                        
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    nombre
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    varchar(100)
-                  </td>
-                  <td>Sí</td>
-                  <td class="text-nowrap">
-                                        Anonimo
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    descripcioncriterio
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    varchar(200)
-                  </td>
-                  <td>Sí</td>
-                  <td class="text-nowrap">
-                                        Sin Criterio
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    estatus
-                                    </td>
-                  <td lang="en" dir="ltr">
-                    enum(&#039;Activo&#039;, &#039;Inactivo&#039;)
-                  </td>
-                  <td>No</td>
-                  <td class="text-nowrap">
-                                        Activo
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    fecha_actualizacion
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    timestamp
-                  </td>
-                  <td>Sí</td>
-                  <td class="text-nowrap">
-                                        <em>NULL</em>
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    fecha_registro
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    timestamp
-                  </td>
-                  <td>Sí</td>
-                  <td class="text-nowrap">
-                                        current_timestamp()
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                        </tbody>
-          </table>
-  
-                    <h3>Índices</h3>
-  
-            <table class="table table-striped align-middle">
-              <thead>
-                <tr>
-                  <th>Nombre de la clave</th>
-                  <th>Tipo</th>
-                  <th>Único</th>
-                  <th>Empaquetado</th>
-                  <th>Columna</th>
-                  <th>Cardinalidad</th>
-                  <th>Cotejamiento</th>
-                  <th>Nulo</th>
-                  <th>Comentario</th>
-                </tr>
-              </thead>
-  
-              <tbody>
-                                                <tr>
-                  <td rowspan="1">PRIMARY</td>
-                  <td rowspan="1">BTREE</td>
-                  <td rowspan="1">Sí</td>
-                  <td rowspan="1">No</td>
-  
-                                                      <td>
-                      id_criterio
-                                        </td>
-                    <td>0</td>
-                    <td>A</td>
-                    <td>No</td>
-  
-                                        <td rowspan="1"></td>
-                                      </tr>
-                                            </tbody>
-            </table>
-                </div>
-            <div>
-          <h2>tbb_editorial</h2>
-          
-          <table class="table table-striped align-middle">
-            <thead>
-              <tr>
-                <th>Columna</th>
-                <th>Tipo</th>
-                <th>Nulo</th>
-                <th>Predeterminado</th>
-                                <th>Enlaces a</th>
-                              <th>Comentarios</th>
-                                <th>Tipo de medio</th>
-                            </tr>
-            </thead>
-            <tbody>
-                            <tr>
-                  <td class="text-nowrap">
-                    id_editorial
-                                        <em>(Primaria)</em>
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    int(11)
-                  </td>
-                  <td>No</td>
-                  <td class="text-nowrap">
-                                        
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    nombreeditorial
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    varchar(100)
-                  </td>
-                  <td>No</td>
-                  <td class="text-nowrap">
-                                        
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    autoresEditorial
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    varchar(100)
-                  </td>
-                  <td>Sí</td>
-                  <td class="text-nowrap">
-                                        Autor Anonimo
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    logoEditorial
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    longblob
-                  </td>
-                  <td>Sí</td>
-                  <td class="text-nowrap">
-                                        <em>NULL</em>
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    estatus
-                                    </td>
-                  <td lang="en" dir="ltr">
-                    enum(&#039;Activo&#039;, &#039;Inactivo&#039;)
-                  </td>
-                  <td>No</td>
-                  <td class="text-nowrap">
-                                        Activo
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    fecha_actualizacion
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    timestamp
-                  </td>
-                  <td>Sí</td>
-                  <td class="text-nowrap">
-                                        <em>NULL</em>
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    fecha_registro
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    timestamp
-                  </td>
-                  <td>Sí</td>
-                  <td class="text-nowrap">
-                                        current_timestamp()
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                        </tbody>
-          </table>
-  
-                    <h3>Índices</h3>
-  
-            <table class="table table-striped align-middle">
-              <thead>
-                <tr>
-                  <th>Nombre de la clave</th>
-                  <th>Tipo</th>
-                  <th>Único</th>
-                  <th>Empaquetado</th>
-                  <th>Columna</th>
-                  <th>Cardinalidad</th>
-                  <th>Cotejamiento</th>
-                  <th>Nulo</th>
-                  <th>Comentario</th>
-                </tr>
-              </thead>
-  
-              <tbody>
-                                                <tr>
-                  <td rowspan="1">PRIMARY</td>
-                  <td rowspan="1">BTREE</td>
-                  <td rowspan="1">Sí</td>
-                  <td rowspan="1">No</td>
-  
-                                                      <td>
-                      id_editorial
-                                        </td>
-                    <td>0</td>
-                    <td>A</td>
-                    <td>No</td>
-  
-                                        <td rowspan="1"></td>
-                                      </tr>
-                                            </tbody>
-            </table>
-                </div>
-            <div>
-          <h2>tbb_genero</h2>
-          
-          <table class="table table-striped align-middle">
-            <thead>
-              <tr>
-                <th>Columna</th>
-                <th>Tipo</th>
-                <th>Nulo</th>
-                <th>Predeterminado</th>
-                                <th>Enlaces a</th>
-                              <th>Comentarios</th>
-                                <th>Tipo de medio</th>
-                            </tr>
-            </thead>
-            <tbody>
-                            <tr>
-                  <td class="text-nowrap">
-                    id_genero
-                                        <em>(Primaria)</em>
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    int(11)
-                  </td>
-                  <td>No</td>
-                  <td class="text-nowrap">
-                                        
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    nombreGenero
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    varchar(45)
-                  </td>
-                  <td>No</td>
-                  <td class="text-nowrap">
-                                        
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    GeneroPadre
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    int(11)
-                  </td>
-                  <td>Sí</td>
-                  <td class="text-nowrap">
-                                        <em>NULL</em>
-                                    </td>
-                                    <td>tbb_genero -&gt; id_genero</td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    estatus
-                                    </td>
-                  <td lang="en" dir="ltr">
-                    enum(&#039;Activo&#039;, &#039;Inactivo&#039;)
-                  </td>
-                  <td>No</td>
-                  <td class="text-nowrap">
-                                        Activo
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    fecha_actualizacion
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    timestamp
-                  </td>
-                  <td>Sí</td>
-                  <td class="text-nowrap">
-                                        <em>NULL</em>
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    fecha_registro
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    timestamp
-                  </td>
-                  <td>Sí</td>
-                  <td class="text-nowrap">
-                                        current_timestamp()
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                        </tbody>
-          </table>
-  
-                    <h3>Índices</h3>
-  
-            <table class="table table-striped align-middle">
-              <thead>
-                <tr>
-                  <th>Nombre de la clave</th>
-                  <th>Tipo</th>
-                  <th>Único</th>
-                  <th>Empaquetado</th>
-                  <th>Columna</th>
-                  <th>Cardinalidad</th>
-                  <th>Cotejamiento</th>
-                  <th>Nulo</th>
-                  <th>Comentario</th>
-                </tr>
-              </thead>
-  
-              <tbody>
-                                                <tr>
-                  <td rowspan="1">PRIMARY</td>
-                  <td rowspan="1">BTREE</td>
-                  <td rowspan="1">Sí</td>
-                  <td rowspan="1">No</td>
-  
-                                                      <td>
-                      id_genero
-                                        </td>
-                    <td>0</td>
-                    <td>A</td>
-                    <td>No</td>
-  
-                                        <td rowspan="1"></td>
-                                      </tr>
-                                                                <tr>
-                  <td rowspan="1">GeneroPadre_idx</td>
-                  <td rowspan="1">BTREE</td>
-                  <td rowspan="1">No</td>
-                  <td rowspan="1">No</td>
-  
-                                                      <td>
-                      GeneroPadre
-                                        </td>
-                    <td>0</td>
-                    <td>A</td>
-                    <td>Sí</td>
-  
-                                        <td rowspan="1"></td>
-                                      </tr>
-                                            </tbody>
-            </table>
-                </div>
-            <div>
-          <h2>tbb_libro</h2>
-          
-          <table class="table table-striped align-middle">
-            <thead>
-              <tr>
-                <th>Columna</th>
-                <th>Tipo</th>
-                <th>Nulo</th>
-                <th>Predeterminado</th>
-                                <th>Enlaces a</th>
-                              <th>Comentarios</th>
-                                <th>Tipo de medio</th>
-                            </tr>
-            </thead>
-            <tbody>
-                            <tr>
-                  <td class="text-nowrap">
-                    id_libro
-                                        <em>(Primaria)</em>
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    int(11)
-                  </td>
-                  <td>No</td>
-                  <td class="text-nowrap">
-                                        
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    titulolibro
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    varchar(100)
-                  </td>
-                  <td>No</td>
-                  <td class="text-nowrap">
-                                        
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    portada
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    longblob
-                  </td>
-                  <td>Sí</td>
-                  <td class="text-nowrap">
-                                        <em>NULL</em>
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    CriterioId
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    int(11)
-                  </td>
-                  <td>Sí</td>
-                  <td class="text-nowrap">
-                                        <em>NULL</em>
-                                    </td>
-                                    <td>tbb_criterio -&gt; id_criterio</td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    EditorialId
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    int(11)
-                  </td>
-                  <td>Sí</td>
-                  <td class="text-nowrap">
-                                        <em>NULL</em>
-                                    </td>
-                                    <td>tbb_editorial -&gt; id_editorial</td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    GeneroId
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    int(11)
-                  </td>
-                  <td>No</td>
-                  <td class="text-nowrap">
-                                        
-                                    </td>
-                                    <td>tbb_genero -&gt; id_genero</td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    numeroPaginas
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    int(11)
-                  </td>
-                  <td>Sí</td>
-                  <td class="text-nowrap">
-                                        <em>NULL</em>
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    fechaPublicacion
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    date
-                  </td>
-                  <td>Sí</td>
-                  <td class="text-nowrap">
-                                        <em>NULL</em>
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    descripcionlibro
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    varchar(200)
-                  </td>
-                  <td>Sí</td>
-                  <td class="text-nowrap">
-                                        <em>NULL</em>
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    ValoracionId
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    int(11)
-                  </td>
-                  <td>No</td>
-                  <td class="text-nowrap">
-                                        
-                                    </td>
-                                    <td>tbb_valoracion -&gt; id_valoracion</td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    estatus
-                                    </td>
-                  <td lang="en" dir="ltr">
-                    enum(&#039;Activo&#039;, &#039;Inactivo&#039;)
-                  </td>
-                  <td>Sí</td>
-                  <td class="text-nowrap">
-                                        Activo
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    fecha_actualizacion
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    timestamp
-                  </td>
-                  <td>Sí</td>
-                  <td class="text-nowrap">
-                                        <em>NULL</em>
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    fecha_registro
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    timestamp
-                  </td>
-                  <td>Sí</td>
-                  <td class="text-nowrap">
-                                        current_timestamp()
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                        </tbody>
-          </table>
-  
-                    <h3>Índices</h3>
-  
-            <table class="table table-striped align-middle">
-              <thead>
-                <tr>
-                  <th>Nombre de la clave</th>
-                  <th>Tipo</th>
-                  <th>Único</th>
-                  <th>Empaquetado</th>
-                  <th>Columna</th>
-                  <th>Cardinalidad</th>
-                  <th>Cotejamiento</th>
-                  <th>Nulo</th>
-                  <th>Comentario</th>
-                </tr>
-              </thead>
-  
-              <tbody>
-                                                <tr>
-                  <td rowspan="1">PRIMARY</td>
-                  <td rowspan="1">BTREE</td>
-                  <td rowspan="1">Sí</td>
-                  <td rowspan="1">No</td>
-  
-                                                      <td>
-                      id_libro
-                                        </td>
-                    <td>0</td>
-                    <td>A</td>
-                    <td>No</td>
-  
-                                        <td rowspan="1"></td>
-                                      </tr>
-                                                                <tr>
-                  <td rowspan="1">CriterioID_idx</td>
-                  <td rowspan="1">BTREE</td>
-                  <td rowspan="1">No</td>
-                  <td rowspan="1">No</td>
-  
-                                                      <td>
-                      CriterioId
-                                        </td>
-                    <td>0</td>
-                    <td>A</td>
-                    <td>Sí</td>
-  
-                                        <td rowspan="1"></td>
-                                      </tr>
-                                                                <tr>
-                  <td rowspan="1">EditorialID_idx</td>
-                  <td rowspan="1">BTREE</td>
-                  <td rowspan="1">No</td>
-                  <td rowspan="1">No</td>
-  
-                                                      <td>
-                      EditorialId
-                                        </td>
-                    <td>0</td>
-                    <td>A</td>
-                    <td>Sí</td>
-  
-                                        <td rowspan="1"></td>
-                                      </tr>
-                                                                <tr>
-                  <td rowspan="1">GeneroID_idx</td>
-                  <td rowspan="1">BTREE</td>
-                  <td rowspan="1">No</td>
-                  <td rowspan="1">No</td>
-  
-                                                      <td>
-                      GeneroId
-                                        </td>
-                    <td>0</td>
-                    <td>A</td>
-                    <td>No</td>
-  
-                                        <td rowspan="1"></td>
-                                      </tr>
-                                                                <tr>
-                  <td rowspan="1">ValoracionID_idx</td>
-                  <td rowspan="1">BTREE</td>
-                  <td rowspan="1">No</td>
-                  <td rowspan="1">No</td>
-  
-                                                      <td>
-                      ValoracionId
-                                        </td>
-                    <td>0</td>
-                    <td>A</td>
-                    <td>No</td>
-  
-                                        <td rowspan="1"></td>
-                                      </tr>
-                                            </tbody>
-            </table>
-                </div>
-            <div>
-          <h2>tbb_persona</h2>
-          
-          <table class="table table-striped align-middle">
-            <thead>
-              <tr>
-                <th>Columna</th>
-                <th>Tipo</th>
-                <th>Nulo</th>
-                <th>Predeterminado</th>
-                                <th>Enlaces a</th>
-                              <th>Comentarios</th>
-                                <th>Tipo de medio</th>
-                            </tr>
-            </thead>
-            <tbody>
-                            <tr>
-                  <td class="text-nowrap">
-                    id_persona
-                                        <em>(Primaria)</em>
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    int(11)
-                  </td>
-                  <td>No</td>
-                  <td class="text-nowrap">
-                                        
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    nombre
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    varchar(50)
-                  </td>
-                  <td>No</td>
-                  <td class="text-nowrap">
-                                        
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    apellido
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    varchar(50)
-                  </td>
-                  <td>No</td>
-                  <td class="text-nowrap">
-                                        
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    genero
-                                    </td>
-                  <td lang="en" dir="ltr">
-                    enum(&#039;Hombre&#039;, &#039;Mujer&#039;)
-                  </td>
-                  <td>No</td>
-                  <td class="text-nowrap">
-                                        Hombre
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    correo
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    varchar(50)
-                  </td>
-                  <td>No</td>
-                  <td class="text-nowrap">
-                                        
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    contrasena
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    varchar(50)
-                  </td>
-                  <td>No</td>
-                  <td class="text-nowrap">
-                                        
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    fecha_nacimiento
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    date
-                  </td>
-                  <td>No</td>
-                  <td class="text-nowrap">
-                                        
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    estatus
-                                    </td>
-                  <td lang="en" dir="ltr">
-                    enum(&#039;Activo&#039;, &#039;Inactivo&#039;)
-                  </td>
-                  <td>No</td>
-                  <td class="text-nowrap">
-                                        Activo
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    fecha_actualizacion
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    timestamp
-                  </td>
-                  <td>Sí</td>
-                  <td class="text-nowrap">
-                                        <em>NULL</em>
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    fecha_registro
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    timestamp
-                  </td>
-                  <td>Sí</td>
-                  <td class="text-nowrap">
-                                        current_timestamp()
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                        </tbody>
-          </table>
-  
-                    <h3>Índices</h3>
-  
-            <table class="table table-striped align-middle">
-              <thead>
-                <tr>
-                  <th>Nombre de la clave</th>
-                  <th>Tipo</th>
-                  <th>Único</th>
-                  <th>Empaquetado</th>
-                  <th>Columna</th>
-                  <th>Cardinalidad</th>
-                  <th>Cotejamiento</th>
-                  <th>Nulo</th>
-                  <th>Comentario</th>
-                </tr>
-              </thead>
-  
-              <tbody>
-                                                <tr>
-                  <td rowspan="1">PRIMARY</td>
-                  <td rowspan="1">BTREE</td>
-                  <td rowspan="1">Sí</td>
-                  <td rowspan="1">No</td>
-  
-                                                      <td>
-                      id_persona
-                                        </td>
-                    <td>405</td>
-                    <td>A</td>
-                    <td>No</td>
-  
-                                        <td rowspan="1"></td>
-                                      </tr>
-                                                                <tr>
-                  <td rowspan="1">correo_UNIQUE</td>
-                  <td rowspan="1">BTREE</td>
-                  <td rowspan="1">Sí</td>
-                  <td rowspan="1">No</td>
-  
-                                                      <td>
-                      correo
-                                        </td>
-                    <td>405</td>
-                    <td>A</td>
-                    <td>No</td>
-  
-                                        <td rowspan="1"></td>
-                                      </tr>
-                                            </tbody>
-            </table>
-                </div>
-            <div>
-          <h2>tbb_recomendacion</h2>
-          
-          <table class="table table-striped align-middle">
-            <thead>
-              <tr>
-                <th>Columna</th>
-                <th>Tipo</th>
-                <th>Nulo</th>
-                <th>Predeterminado</th>
-                                <th>Enlaces a</th>
-                              <th>Comentarios</th>
-                                <th>Tipo de medio</th>
-                            </tr>
-            </thead>
-            <tbody>
-                            <tr>
-                  <td class="text-nowrap">
-                    id_recomendacion
-                                        <em>(Primaria)</em>
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    int(11)
-                  </td>
-                  <td>No</td>
-                  <td class="text-nowrap">
-                                        
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    LibroId
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    int(11)
-                  </td>
-                  <td>No</td>
-                  <td class="text-nowrap">
-                                        
-                                    </td>
-                                    <td>tbb_libro -&gt; id_libro</td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    PersonaId
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    int(11)
-                  </td>
-                  <td>No</td>
-                  <td class="text-nowrap">
-                                        
-                                    </td>
-                                    <td>tbb_persona -&gt; id_persona</td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    estatus
-                                    </td>
-                  <td lang="en" dir="ltr">
-                    enum(&#039;Activo&#039;, &#039;Inactivo&#039;)
-                  </td>
-                  <td>No</td>
-                  <td class="text-nowrap">
-                                        Activo
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    fecha_actualizacion
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    timestamp
-                  </td>
-                  <td>Sí</td>
-                  <td class="text-nowrap">
-                                        <em>NULL</em>
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    fecha_registro
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    timestamp
-                  </td>
-                  <td>Sí</td>
-                  <td class="text-nowrap">
-                                        current_timestamp()
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                        </tbody>
-          </table>
-  
-                    <h3>Índices</h3>
-  
-            <table class="table table-striped align-middle">
-              <thead>
-                <tr>
-                  <th>Nombre de la clave</th>
-                  <th>Tipo</th>
-                  <th>Único</th>
-                  <th>Empaquetado</th>
-                  <th>Columna</th>
-                  <th>Cardinalidad</th>
-                  <th>Cotejamiento</th>
-                  <th>Nulo</th>
-                  <th>Comentario</th>
-                </tr>
-              </thead>
-  
-              <tbody>
-                                                <tr>
-                  <td rowspan="1">PRIMARY</td>
-                  <td rowspan="1">BTREE</td>
-                  <td rowspan="1">Sí</td>
-                  <td rowspan="1">No</td>
-  
-                                                      <td>
-                      id_recomendacion
-                                        </td>
-                    <td>0</td>
-                    <td>A</td>
-                    <td>No</td>
-  
-                                        <td rowspan="1"></td>
-                                      </tr>
-                                                                <tr>
-                  <td rowspan="1">LibroID_idx</td>
-                  <td rowspan="1">BTREE</td>
-                  <td rowspan="1">No</td>
-                  <td rowspan="1">No</td>
-  
-                                                      <td>
-                      LibroId
-                                        </td>
-                    <td>0</td>
-                    <td>A</td>
-                    <td>No</td>
-  
-                                        <td rowspan="1"></td>
-                                      </tr>
-                                                                <tr>
-                  <td rowspan="1">PersonaID_idx</td>
-                  <td rowspan="1">BTREE</td>
-                  <td rowspan="1">No</td>
-                  <td rowspan="1">No</td>
-  
-                                                      <td>
-                      PersonaId
-                                        </td>
-                    <td>0</td>
-                    <td>A</td>
-                    <td>No</td>
-  
-                                        <td rowspan="1"></td>
-                                      </tr>
-                                            </tbody>
-            </table>
-                </div>
-            <div>
-          <h2>tbb_valoracion</h2>
-          
-          <table class="table table-striped align-middle">
-            <thead>
-              <tr>
-                <th>Columna</th>
-                <th>Tipo</th>
-                <th>Nulo</th>
-                <th>Predeterminado</th>
-                                <th>Enlaces a</th>
-                              <th>Comentarios</th>
-                                <th>Tipo de medio</th>
-                            </tr>
-            </thead>
-            <tbody>
-                            <tr>
-                  <td class="text-nowrap">
-                    id_valoracion
-                                        <em>(Primaria)</em>
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    int(11)
-                  </td>
-                  <td>No</td>
-                  <td class="text-nowrap">
-                                        
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    PersonaId
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    int(11)
-                  </td>
-                  <td>No</td>
-                  <td class="text-nowrap">
-                                        
-                                    </td>
-                                    <td>tbb_persona -&gt; id_persona</td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    numeroestrellas
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    int(10)
-                  </td>
-                  <td>No</td>
-                  <td class="text-nowrap">
-                                        1
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    estatus
-                                    </td>
-                  <td lang="en" dir="ltr">
-                    enum(&#039;Activo&#039;, &#039;Inactivo&#039;)
-                  </td>
-                  <td>No</td>
-                  <td class="text-nowrap">
-                                        Activo
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    fecha_actualizacion
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    timestamp
-                  </td>
-                  <td>Sí</td>
-                  <td class="text-nowrap">
-                                        <em>NULL</em>
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                            <tr>
-                  <td class="text-nowrap">
-                    fecha_registro
-                                    </td>
-                  <td lang="en" dir="ltr" class="text-nowrap">
-                    timestamp
-                  </td>
-                  <td>Sí</td>
-                  <td class="text-nowrap">
-                                        current_timestamp()
-                                    </td>
-                                    <td></td>
-                                  <td></td>
-                                    <td></td>
-                                </tr>
-                        </tbody>
-          </table>
-  
-                    <h3>Índices</h3>
-  
-            <table class="table table-striped align-middle">
-              <thead>
-                <tr>
-                  <th>Nombre de la clave</th>
-                  <th>Tipo</th>
-                  <th>Único</th>
-                  <th>Empaquetado</th>
-                  <th>Columna</th>
-                  <th>Cardinalidad</th>
-                  <th>Cotejamiento</th>
-                  <th>Nulo</th>
-                  <th>Comentario</th>
-                </tr>
-              </thead>
-  
-              <tbody>
-                                                <tr>
-                  <td rowspan="1">PRIMARY</td>
-                  <td rowspan="1">BTREE</td>
-                  <td rowspan="1">Sí</td>
-                  <td rowspan="1">No</td>
-  
-                                                      <td>
-                      id_valoracion
-                                        </td>
-                    <td>0</td>
-                    <td>A</td>
-                    <td>No</td>
-  
-                                        <td rowspan="1"></td>
-                                      </tr>
-                                                                <tr>
-                  <td rowspan="1">PersonaID_idx</td>
-                  <td rowspan="1">BTREE</td>
-                  <td rowspan="1">No</td>
-                  <td rowspan="1">No</td>
-  
-                                                      <td>
-                      PersonaId
-                                        </td>
-                    <td>0</td>
-                    <td>A</td>
-                    <td>No</td>
-  
-                                        <td rowspan="1"></td>
-                                      </tr>
-                                            </tbody>
-            </table>
-                </div>
-        </div>
+<table id='apellidos_aleatorios'>
+<caption>apellidos_aleatorios</caption>
+<tr><td colspan='11'>Apellidospara generar aleatoriamente </td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>id</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Automatico</td>
+</tr>
+<tr>
+    <td>apellido</td>
+    <td>VARCHAR(50)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>NULL</td>
+    <td>Apellidos de personas</td>
+</tr>
+<table id='nombres_aleatorios'>
+<caption>nombres_aleatorios</caption>
+<tr><td colspan='11'>Tabla de nombres de personas</td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>id</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Id automatico</td>
+</tr>
+<tr>
+    <td>nombre</td>
+    <td>VARCHAR(50)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>NULL</td>
+    <td>Nombres de personas </td>
+</tr>
+<table id='tbb_autor'>
+<caption>tbb_autor</caption>
+<tr><td colspan='11'>Tabla de autor en donde se encuentran las personas que suben sus libros a la plataforma</td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>id_autor</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Id unico de autor</td>
+</tr>
+<tr>
+    <td>PersonaId</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Id de la tbb_persona que genera automaticamente</td>
+</tr>
+<tr>
+    <td>LibroId</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Libro_id que viene de la tabla tbb_libro </td>
+</tr>
+<tr>
+    <td>cantidadlibros</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>'1'</td>
+    <td>aqui se muestran la cantidad de libros que tiene ese autor</td>
+</tr>
+<tr>
+    <td>biografiaAutor</td>
+    <td>VARCHAR(205)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>'Biografia no disponible'</td>
+    <td>Descripcion del autor en donde cuenta un poco de el y de sus libros</td>
+</tr>
+<tr>
+    <td>estatus</td>
+    <td>ENUM('Activo', 'Inactivo')</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>'Activo'</td>
+    <td>estatus si esta activo o no </td>
+</tr>
+<tr>
+    <td>fecha_actualizacion</td>
+    <td>TIMESTAMP</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>NULL</td>
+    <td>fecha de actualizacion del autor</td>
+</tr>
+<tr>
+    <td>fecha_registro</td>
+    <td>TIMESTAMP</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>CURRENT_TIMESTAMP</td>
+    <td>fecha del registro cuando se subio el autor</td>
+</tr>
+<table id='tbb_criterio'>
+<caption>tbb_criterio</caption>
+<tr><td colspan='11'>Tabla de tbb_criterio donde estan los criterios con los cuales se puede calificar a un libro</td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>id_criterio</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>id criterio donde sera auto incremental y se podra identificar el criterio </td>
+</tr>
+<tr>
+    <td>nombre</td>
+    <td>VARCHAR(100)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>'Anonimo'</td>
+    <td>Como se nombra el criterio para su visualizacion </td>
+</tr>
+<tr>
+    <td>descripcioncriterio</td>
+    <td>VARCHAR(200)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>'Sin Criterio'</td>
+    <td>Descripcion del criterio que es lo que significa cada uno </td>
+</tr>
+<tr>
+    <td>estatus</td>
+    <td>ENUM('Activo', 'Inactivo')</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>'Activo'</td>
+    <td>estatus si esta activo o no</td>
+</tr>
+<tr>
+    <td>fecha_actualizacion</td>
+    <td>TIMESTAMP</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>NULL</td>
+    <td>fecha de actualizacion del criterio</td>
+</tr>
+<tr>
+    <td>fecha_registro</td>
+    <td>TIMESTAMP</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>CURRENT_TIMESTAMP</td>
+    <td>fecha de registro del criterio</td>
+</tr>
+<table id='tbb_editorial'>
+<caption>tbb_editorial</caption>
+<tr><td colspan='11'>Editorial tabla donde se muestran los lugares de donde fueron publicados los libros</td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>id_editorial</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>id que se pone auto incremental</td>
+</tr>
+<tr>
+    <td>nombreeditorial</td>
+    <td>VARCHAR(100)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Nombre de la editorial de donde vienen los libros</td>
+</tr>
+<tr>
+    <td>autoresEditorial</td>
+    <td>VARCHAR(100)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>'Autor Anonimo'</td>
+    <td>Autores que tiene esta editorial</td>
+</tr>
+<tr>
+    <td>logoEditorial</td>
+    <td>LONGBLOB</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>NULL</td>
+    <td>Imagen de la empresa editorial</td>
+</tr>
+<tr>
+    <td>estatus</td>
+    <td>ENUM('Activo', 'Inactivo')</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>'Activo'</td>
+    <td>Si la editorial esta activo o no </td>
+</tr>
+<tr>
+    <td>fecha_actualizacion</td>
+    <td>TIMESTAMP</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>NULL</td>
+    <td>Fecha en la que se actualiza la editorial</td>
+</tr>
+<tr>
+    <td>fecha_registro</td>
+    <td>TIMESTAMP</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>CURRENT_TIMESTAMP</td>
+    <td>Fecha en la que se sube la editorial</td>
+</tr>
+<table id='tbb_genero'>
+<caption>tbb_genero</caption>
+<tr><td colspan='11'>Esta tabla se muestran los generos que tendra disponibles bookfash</td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>id_genero</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>id que se genera automaticamente</td>
+</tr>
+<tr>
+    <td>nombreGenero</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Nombre del genero en el cual esta escrito el libro</td>
+</tr>
+<tr>
+    <td>GeneroPadre</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>NULL</td>
+    <td>Esto muestra si el libro trae mas de un genero</td>
+</tr>
+<tr>
+    <td>estatus</td>
+    <td>ENUM('Activo', 'Inactivo')</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>'Activo'</td>
+    <td>Si el genero del libro esta activo o no </td>
+</tr>
+<tr>
+    <td>fecha_actualizacion</td>
+    <td>TIMESTAMP</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>NULL</td>
+    <td>Fecha en la que se actualiza el genero </td>
+</tr>
+<tr>
+    <td>fecha_registro</td>
+    <td>TIMESTAMP</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>CURRENT_TIMESTAMP</td>
+    <td>Fecha en la que se registra el genero del libro</td>
+</tr>
+<table id='tbb_libro'>
+<caption>tbb_libro</caption>
+<tr><td colspan='11'>Tabla donde se visualizaran los libros que tendra nuestra aplicaci�n</td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>id_libro</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Genereado automaticamente</td>
+</tr>
+<tr>
+    <td>titulolibro</td>
+    <td>VARCHAR(100)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Nombre del libro que se publica</td>
+</tr>
+<tr>
+    <td>portada</td>
+    <td>LONGBLOB</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>NULL</td>
+    <td>Imagen del libro</td>
+</tr>
+<tr>
+    <td>CriterioId</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>NULL</td>
+    <td>Se jala de la tabla criterio y es como se califica el libro</td>
+</tr>
+<tr>
+    <td>EditorialId</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>NULL</td>
+    <td>De donde se publica el libro </td>
+</tr>
+<tr>
+    <td>GeneroId</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Genero en el que esta escrito el libro </td>
+</tr>
+<tr>
+    <td>numeroPaginas</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>NULL</td>
+    <td>Numero o total de paginas que tiene el libro </td>
+</tr>
+<tr>
+    <td>fechaPublicacion</td>
+    <td>DATE</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>NULL</td>
+    <td>A�o o fexcha en la que se esta publicando el libro </td>
+</tr>
+<tr>
+    <td>descripcionlibro</td>
+    <td>VARCHAR(200)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>NULL</td>
+    <td>Resumen de lo que trata el libro </td>
+</tr>
+<tr>
+    <td>ValoracionId</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Como esta calificado el libro en base a estrellas</td>
+</tr>
+<tr>
+    <td>estatus</td>
+    <td>ENUM('Activo', 'Inactivo')</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>'Activo'</td>
+    <td>Si el libro esta activo o no </td>
+</tr>
+<tr>
+    <td>fecha_actualizacion</td>
+    <td>TIMESTAMP</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>NULL</td>
+    <td>Fecha en la que se le hacen modificaciones </td>
+</tr>
+<tr>
+    <td>fecha_registro</td>
+    <td>TIMESTAMP</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>CURRENT_TIMESTAMP</td>
+    <td>Fecha en la que se sube el libro a la base </td>
+</tr>
+<table id='tbb_persona'>
+<caption>tbb_persona</caption>
+<tr><td colspan='11'>Tabla de las personas que se registran en la app</td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>id_persona</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Id que se genera automaticamente</td>
+</tr>
+<tr>
+    <td>nombre</td>
+    <td>VARCHAR(50)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Nombre de la persona</td>
+</tr>
+<tr>
+    <td>apellido</td>
+    <td>VARCHAR(50)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Apellido de la persona</td>
+</tr>
+<tr>
+    <td>genero</td>
+    <td>ENUM('Hombre', 'Mujer')</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>'Hombre'</td>
+    <td>Genero de la persona M o H</td>
+</tr>
+<tr>
+    <td>correo</td>
+    <td>VARCHAR(50)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Correo Unico de la persona</td>
+</tr>
+<tr>
+    <td>contrasena</td>
+    <td>VARCHAR(50)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Contrase�a generada por la persona</td>
+</tr>
+<tr>
+    <td>fecha_nacimiento</td>
+    <td>DATE</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Fecha de nacimiento de la persona</td>
+</tr>
+<tr>
+    <td>estatus</td>
+    <td>ENUM('Activo', 'Inactivo')</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>'Activo'</td>
+    <td>Activo o Inactivo</td>
+</tr>
+<tr>
+    <td>fecha_actualizacion</td>
+    <td>TIMESTAMP</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>NULL</td>
+    <td>Fecha de modificacion de la base </td>
+</tr>
+<tr>
+    <td>fecha_registro</td>
+    <td>TIMESTAMP</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>CURRENT_TIMESTAMP</td>
+    <td>Fecha de modificacion y registro de la base </td>
+</tr>
+<table id='tbb_recomendacion'>
+<caption>tbb_recomendacion</caption>
+<tr><td colspan='11'>Tabla de recomendaciones en donde en base a los generos leidos mostrara libros </td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>id_recomendacion</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Generado automaticamente </td>
+</tr>
+<tr>
+    <td>LibroId</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Id del libro que se esta recomendando </td>
+</tr>
+<tr>
+    <td>PersonaId</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Id de la persona que leyo el libro </td>
+</tr>
+<tr>
+    <td>estatus</td>
+    <td>ENUM('Activo', 'Inactivo')</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>'Activo'</td>
+    <td>Activo o Inactivo</td>
+</tr>
+<tr>
+    <td>fecha_actualizacion</td>
+    <td>TIMESTAMP</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>NULL</td>
+    <td>Fecha de edicion de la recomendacion</td>
+</tr>
+<tr>
+    <td>fecha_registro</td>
+    <td>TIMESTAMP</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>CURRENT_TIMESTAMP</td>
+    <td>Fecha de registro en la base </td>
+</tr>
+<table id='tbb_valoracion'>
+<caption>tbb_valoracion</caption>
+<tr><td colspan='11'>Valoracion que se le dara a los libros mediante estrellas</td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>id_valoracion</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Id generado automaticamente </td>
+</tr>
+<tr>
+    <td>PersonaId</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Id de la persona que hizo esa valoracion </td>
+</tr>
+<tr>
+    <td>numeroestrellas</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>'1'</td>
+    <td>Total de estrellas que se le da al libro </td>
+</tr>
+<tr>
+    <td>estatus</td>
+    <td>ENUM('Activo', 'Inactivo')</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>'Activo'</td>
+    <td>Si esta activo o Inactivo</td>
+</tr>
+<tr>
+    <td>fecha_actualizacion</td>
+    <td>TIMESTAMP</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>NULL</td>
+    <td>Fecha en la que se le hacen modificaciones a la base </td>
+</tr>
+<tr>
+    <td>fecha_registro</td>
+    <td>TIMESTAMP</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>CURRENT_TIMESTAMP</td>
+    <td>Fecha en la que se sube a la base de datos</td>
+</tr>
 </table>
 </body>
 </html>
